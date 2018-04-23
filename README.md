@@ -1,176 +1,201 @@
-<!--h-->
-# Vue Admin LTE
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/22a9c82803ce410caee8ddc67957d027)](https://www.codacy.com/app/laravel-enso/VueAdminLTE?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=laravel-enso/VueAdminLTE&amp;utm_campaign=Badge_Grade)
-[![StyleCI](https://styleci.io/repos/99346727/shield?branch=master)](https://styleci.io/repos/99346727)
-[![License](https://poser.pugx.org/laravel-enso/vueadminlte/license)](https://https://packagist.org/packages/laravel-enso/vueadminlte)
-[![Total Downloads](https://poser.pugx.org/laravel-enso/vueadminlte/downloads)](https://packagist.org/packages/laravel-enso/vueadminlte)
-[![Latest Stable Version](https://poser.pugx.org/laravel-enso/vueadminlte/version)](https://packagist.org/packages/laravel-enso/vueadminlte)
-<!--/h-->
-
-Admin LTE Vueified for [Laravel Enso](https://github.com/laravel-enso/Enso)
-
-### Features
-- `Addresses` - polymorphic addresses functionality
-- `Box`
-- `BoxWidget`
-- `Breadcrumbs` - uses is included in the `Page` component and automatically generates the breadcrumbs
-- `InfoBox`
-- `Notifications` - is the notifications menu, used in the header 
-- `Overlay` - is a spinner overlay used to indicate the loading state
-- `Page` - is the container for the page contents
-- `RoAddresses` - an extension for addresses with Romanian-specific formatting
-- `SmallBox`
-- `Tabs`
-- `UserMenu` - is the user menu, used in the header
-- `UserWidget`
-- `VueFilter` - additional filters for DataTable 
-
-#### Addresses
-Takes the following parameters:
- `type` - string, the addressable model alias you set in the config | required
-- `id` - number, the id of the addressable model | required
-- `theme` - string, the class used for setting the styling of the box. Defaults to `primary`.
-- `solid` - boolean, a flag for showing a solid type of a box. Defaults to `false`.
-- `open` - boolean, a flag for the starting style (open/closed) of the box. Defaults to `true`.
-- `title` - string, the text for the box title. Defaults to null.
+<p align = "center">
+<img src="https://github.com/devjin0617/vue2-admin-lte/blob/master/vue2-admin-lte-logo.png?raw=true">
+<br>
+<img src="https://img.shields.io/badge/AdminLTE-2.3.11-blue.svg"> <img src="https://img.shields.io/badge/jquery-3.1.1-lightgrey.svg"> <img src="https://img.shields.io/badge/bootstrap-3.3.7-blue.svg"> <img src="https://img.shields.io/badge/vue-2.2.1-brightgreen.svg"> <img src="https://img.shields.io/badge/vuex-2.2.1-brightgreen.svg"> <img src="https://img.shields.io/badge/vue--router-2.3.0-green.svg">
 
 
-#### Box
-Takes the following parameters:
-- `theme` - string, the class used for setting the styling of the box.
-- `border`, boolean, a flag for showing a border arount the component. Defaults to `false`.
-- `solid` - boolean, a flag for showing a solid type of a box. Defaults to `false`.
-- `open` - boolean, a flag for the starting style (open/closed) of the box. Defaults to `true`.
-- `footer` - string, a flag for displaying the footer. Defaults to `false`.
-- `icon` - string, the class for the icon of the box. Defaults to null.
-- `title` - string, the text for the box title. Defaults to null.
-- `search` - boolean, a flag for displaying the search input. Defaults to `false`.
-- `badge` - number, the number to be displayed in a badge, in the box header. Defaults to null.
-- `refresh` - boolean, a flag for showing the refresh control. Defaults to false. 
-- `collapsible` - boolean, a flag for showing the minimization control. Defaults to false.
-- `removable` - boolean, a flag for showing the close control. Defaults to false.
-- `overlay` - boolean, a flag for displaying the loading overlay (spinner). Defaults to false. 
-- `bodyStyle` - object, an object for styling the body. Defaults to `{}`.
 
-#### Breadcrumbs
-- takes no parameters.
-- uses the global `Store` object and the given breadcrumbs to automatically generate breadcrumbs for the current page.
-- is included in the `Page` component but can be used standalone if needed, as long as it has access to the `Store`.
+<br>
+<img src="https://img.shields.io/badge/npm-0.4.3-blue.svg">
+<a href="https://gitter.im/devjin0617/vue2-admin-lte?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" target="_blank">
+  <img src="https://badges.gitter.im/devjin0617/vue2-admin-lte.svg">
+</a>
+</p>
 
-### HowToVideos
-Takes the following parameters:
-- `video`, object, contains the information to display a video | required
-- `tagList`, object, contains the list of all available tags | required
+# vue2-admin-lte ([Demo](https://devjin0617.github.io/vue2-admin-lte/))
 
-Note that this component has not been designed to be reused outside of the HowToVideos menu/page.
+> AdminLTE of Admin control panel template Based on Vuejs 2.x Front-end Framework.
 
-#### Info Box
-Takes the following parameters:
-- `theme` - string, the class used for setting the styling of the box. Required.
-- `icon` - string, the class for the icon of the box. Defaults to null.
-- `text` - string, the text shown in the box. Defaults to null.
-- `number`, string, the text shown in the box. Defaults to null.
-- `progress` - string, progress percentage. Defaults to `false`.
-- `description` - string, the description shown for the progress. Defaults to `false`.
+![](https://github.com/devjin0617/vue2-admin-lte/blob/master/capture.png?raw=true)
 
-#### Notifications
-Takes the following parameters:
-- `user-id` - number, the id of the user for whom the notifications are loaded. Required.
-- `paginate` - number, the # of items on one page, shown or loaded. Defaults to 6.
+## Documentation
 
-#### Overlay
-Takes the following parameters:
-- `line-fg-Color` - string, the color for the foreground of the spinner. Defaults to `#41b883`.
-- `line-bg-Color` - string, the color for the background of the spinner. Defaults to `transparent`.
-- `speed` - number, the speed of the spinner. Defaults to 1.
-- `size` - string, the size of the spinner. Defaults to `medium`.
+> [https://devjin0617.gitbooks.io/vue2-admin-lte-guide/](https://devjin0617.gitbooks.io/vue2-admin-lte-guide/)
 
-#### Page
-Takes the following parameters:
-- `custom-render` - function, the method for handling custom rendering. Defaults to null.
+## Demo Build Setup
 
-#### Romanian Addresses
-Takes the same parameters as Addresses - see above.
+``` bash
+# install dependencies
+npm install
 
-#### Small Box
-Takes the following parameters:
-- `theme` - string, the class used for setting the styling of the box.
-- `icon` - string, the class for the icon of the box. Defaults to null.
-- `title` - string, the text for the box title. Defaults to null.
-- `body`, string, text shown as body. Defaults to null.
-- `overlay` - boolean, a flag for displaying the loading overlay (spinner). Defaults to false. 
+# serve with hot reload at localhost:8080
+npm run dev
 
-#### Tabs
-Takes the following parameters:
-- `tabs` - array, array of strings / objects used for rendering the tabs and their slots. Required.
-- `title` - string, the text for the box title. Defaults to null.
-- `reverse` - boolean, flag for reversing the tab list. Defaults to false.
-- `active`, number, the index of the active tab. Defaults to 0.
-- `icon` - string, the class for the icon of the box. Defaults to null. 
+# build for production with minification
+npm run build
 
-#### User Menu
-Takes no parameters, uses the global `Store` variable
+# build for production and view the bundle analyzer report
+npm run build --report
 
-#### User Widget
-- `theme` - string, the class used for setting the styling. Required.
-- `background` - string, the class used for setting the background.
-- `avatar` - string, the url for the location of the avatar picture.
-- `name` - string, the name of the user displayed. Defaults to null.
-- `position` - string, the position of the user. Defaults to null.
-- `items` - array, list of items to be displayed. Each item must be an object with `value` and `label` properties. Defaults to empty array.
-- `overlay` - boolean, a flag for displaying the loading overlay (spinner). Defaults to false.
+# run unit tests: coming soon
+# npm run unit
 
-### Vue Filter
-Takes the following parameters:
-- `title` - string, the text for the box title. Defaults to null.
-- `theme` - string, the class used for setting the styling of the box. Defaults to `primary`.
-- `options` - array, the list of options to display. Defaults to empty array
-- `value` - anything, the default, starting value | required
-- `offSwitch` - boolean, flag that determines if an off switch is rendered. Defaults to `true`
+# run e2e tests: coming soon
+# npm run e2e
 
-To use it include it in the page:
-```
-<vue-filter
-        title="Taxes Paid"
-        v-model="filters.orders.paid_taxes"
-        :options="vueFilterOptions">
-</vue-filter>
+# run all tests: comping soon
+# npm test
 ```
 
-where the `vueFilterOptions` and `filters` may be something like:
+## How to use
 
+First, npm install
+
+```bash
+$ npm i --save vue2-admin-lte
 ```
-vueFilterOptions: [
-    {value:true, label:"Yes"},
-    {value:false, label:"No"}
-],
-filters: {
-    orders: {                
-        paid_taxes: '',                
+
+append alias config in webpack
+
+```javascript
+module.exports = {
+  resolve: {
+    alias: {
+      'va': 'vue2-admin-lte/src'
     }
-},
+  }
+}
 ```
 
-Next, when defining your DataTable, make sure you give it your filters:
+import css and javascript files
 
+```javascript
+// css files
+import 'va/lib/css'
+
+// js files
+import 'va/lib/script'
 ```
-<data-table 
-    source="orders" 
-    :extra-filters="filters" 
-    id="index-orders-id">
-</data-table>
+
+use the components in .vue
+
+```vue
+<template>
+  <va-button
+    name="Primary"
+    theme="primary"
+    size="btn-lg"
+    :isFlat="true"
+  ></va-button>
+</template>
+
+<script>
+import VAButton from 'va/components/VAButton.vue'
+export default {
+  name: 'Button',
+  components: {
+    'va-button': VAButton
+  }
+}
+</script>
 ```
 
-Note that you may use more than one such filter, just bind it inside the same encompassing `filters` object 
-and it will get passed to the datatables BE logic.  
+## Example
 
-<!--h-->
-### Contributions
+```vue
+<template>
 
-are welcome. Pull requests are great, but issues are good too.
+  <va-direct-chat
+    :talkList="talkList"
+    :badgeCount="3"
+    theme="primary"
+    title="Direct Chat"
+    placeholder="Type Messages ..."
+  ></va-direct-chat>
 
-### License
+</template>
 
-This package is released under the MIT license.
-<!--/h-->
+
+<script>
+import VADirectChat from '../path/to/components/VADirectChat.vue'
+
+export default {
+  name: 'App',
+  data () {
+    return {
+      talkList: [
+        {
+          name: 'Alexander Pierce',
+          date: new Date(),
+          profileImage: 'http://path/to/image',
+          message: `Is this template really for free? That's unbelievable`,
+          isMine: false
+        },
+        {
+          name: 'Sarah Bullock',
+          date: new Date(),
+          profileImage: 'http://path/to/image',
+          message: `You better believe it!`,
+          isMine: true
+        }
+      ]
+    }
+  },
+  components: {
+    'va-direct-chat': VADirectChat
+  }
+}
+
+</script>
+```
+
+## how to start mock server
+
+```javascript
+node ./mock-server/index.js
+```
+
+## how to use Vuex
+
+```javascript
+// /vuex/store.js
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+import * as actions from './actions'
+import * as getters from './getters'
+import modules from './modules'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  actions,
+  getters,
+  modules,
+  strict: process.env.NODE_ENV !== 'production'
+})
+```
+
+
+## Contributing to Vue2 AdminLTE
+
+The following is a set of guidelines for contributing to `Vue2 AdminLTE`.
+
+### Submitting Issues
+
+You can create an issue [here](https://github.com/devjin0617/vue2-admin-lte/issues).
+
+If you can, please include:
+- The version, name of Browser you are using
+- The operating system you are using
+
+Other things that will help resolve your issue:
+- Screenshots or gif
+- dev tools or an alert
+- Perform a search to see if a similar issue has already been submitted
+
+
+### Submitting Pull Requests
+
+- Include screenshots and animated gif in your pull request whenever possible.
+- Use short, present tense commit messages.

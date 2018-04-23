@@ -104,7 +104,7 @@
 		methods: {
 			getCount() {
 				axios.get('/core/notifications/getCount').then(response => {
-					this.unreadCount = response.data;
+					this.unreadCount = response.data.notifications;
 				}).catch(error => {
 					this.reportEnsoException(error);
 				});
